@@ -190,3 +190,17 @@
     transform: scale(1);
   }
 }
+
+@keyframes progress-bar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progress-bar-animate {
+  animation: progress-bar 5s linear forwards;
+}
+
