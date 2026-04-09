@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#7543a7",
+                    "on-tertiary": "#ffeff1",
+                    "tertiary-dim": "#8e294e",
+                    "surface-bright": "#f6f6f8",
+                    "error-dim": "#a70138",
+                    "surface-dim": "#d2d4d8",
+                    "primary-container": "#af8dff",
+                    "background": "#f6f6f8",
+                    "tertiary-fixed": "#ff8eaf",
+                    "tertiary-container": "#ff8eaf",
+                    "primary-fixed-dim": "#a37bff",
+                    "secondary-fixed-dim": "#dbb4ff",
+                    "surface-tint": "#7000ff",
+                    "on-background": "#2d2f31",
+                    "secondary-dim": "#68369a",
+                    "outline-variant": "#acadaf",
+                    "primary": "#7000ff",
+                    "secondary-fixed": "#e4c6ff",
+                    "secondary-container": "#e4c6ff",
+                    "on-tertiary-fixed-variant": "#701038",
+                    "surface": "#f6f6f8",
+                    "on-secondary-fixed": "#4b137d",
+                    "tertiary-fixed-dim": "#f67ca2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-highest": "#dbdde0",
+                    "on-error-container": "#510017",
+                    "on-secondary": "#fbefff",
+                    "surface-variant": "#dbdde0",
+                    "on-secondary-fixed-variant": "#69379c",
+                    "on-primary": "#f8f1ff",
+                    "inverse-on-surface": "#9c9d9f",
+                    "surface-container": "#e7e8ea",
+                    "inverse-surface": "#0c0e10",
+                    "on-secondary-container": "#602c91",
+                    "tertiary": "#9d365a",
+                    "error": "#b41340",
+                    "outline": "#757779",
+                    "primary-dim": "#6200e1",
+                    "on-surface": "#2d2f31",
+                    "error-container": "#f74b6d",
+                    "on-primary-fixed": "#000000",
+                    "surface-container-high": "#e1e2e5",
+                    "surface-container-low": "#f0f1f3",
+                    "on-tertiary-fixed": "#380017",
+                    "inverse-primary": "#a178ff",
+                    "primary-fixed": "#af8dff",
+                    "on-surface-variant": "#5a5c5d",
+                    "on-primary-fixed-variant": "#370085",
+                    "on-tertiary-container": "#640430",
+                    "on-primary-container": "#2c006e",
+                    "on-error": "#ffefef"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f6f6f8; }
+        .glass-nav { backdrop-filter: blur(24px); }
+        .primary-gradient { background: linear-gradient(135deg, #7000ff 0%, #af8dff 100%); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="text-on-surface pb-32">
+<!-- Top AppBar (Mobile Sub-page) -->
+<header class="fixed top-0 w-full z-50 bg-[#f6f6f8]/70 backdrop-blur-xl flex items-center justify-between px-6 h-16">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#7000ff]">arrow_back</span>
+</button>
+<span class="font-semibold tracking-tight text-[#2d2f31] truncate max-w-[180px]">Studio Pro X-1</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#7000ff]">favorite</span>
+</button>
+<button class="active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#7000ff]">share</span>
+</button>
+</div>
+</header>
+<main class="pt-16">
+<!-- Hero Gallery -->
+<section class="relative bg-surface px-4 py-6">
+<div class="relative w-full aspect-square overflow-hidden rounded-lg">
+<img alt="Product Shot" class="w-full h-full object-cover" data-alt="Premium professional studio headphones with sleek matte black finish and leather ear cushions against a minimalist light gray studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLfRSZ6gxAB092yqjoIA1A28SA0WAWV3d4fLvuoQud1X6jbydZYOBS0nacacVOcqTEu8-h93w-sSrnRFx7VBK22VFSVImtgvAi25jhdrMOwdj88IZXOwgJlYOZ83Jnd0fzRB7cS37OpFTrRtxvFWV-d7EoO5t1gEfnkysZApF1bEo3IC16Tm4lXXVsez7Dz2YO2XttK_v6zniM_d95KB6xKdhh8fzb3ZXu_FlyzVz5i2A8BTsXXWAYgoW5sf0IBDPAUXID8Oo_ruUt"/>
+<!-- Pagination Dots -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+<div class="w-8 h-1.5 rounded-full bg-primary"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant/40"></div>
+</div>
+</div>
+</section>
+<!-- Product Info Info -->
+<section class="px-6 py-4 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h1 class="text-2xl font-bold text-on-surface leading-tight tracking-tight">Studio Pro X-1</h1>
+<p class="text-on-surface-variant text-sm mt-1">Ultra-Linear Acoustic Headphones</p>
+</div>
+<div class="flex flex-col items-end">
+<span class="bg-tertiary-container/30 text-on-tertiary-container text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest mb-1">Sale 35%</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold">4.8</span>
+</div>
+</div>
+</div>
+<div class="flex items-baseline gap-3">
+<span class="text-3xl font-extrabold text-on-surface">$299.00</span>
+<span class="text-on-surface-variant line-through text-lg opacity-60">$459.99</span>
+</div>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                Engineered for critical listening and professional mixing. The X-1 delivers an uncompromisingly flat frequency response and zero-distortion playback.
+            </p>
+<!-- Specs Bento -->
+<div class="grid grid-cols-2 gap-3 mt-6">
+<div class="bg-surface-container-low p-4 rounded-md flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">graphic_eq</span>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Range</span>
+<span class="text-sm font-semibold">5Hz - 45kHz</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-md flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+<span class="text-xs font-bold uppercase tracking-wider text-on-surface-variant">Impedance</span>
+<span class="text-sm font-semibold">32 Ohms</span>
+</div>
+</div>
+</section>
+<!-- Product Details / Key Features -->
+<section class="mt-8 px-6">
+<h2 class="text-xl font-bold mb-4">Key Features</h2>
+<div class="space-y-4">
+<div class="flex gap-4 items-start">
+<div class="bg-secondary-container w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">waves</span>
+</div>
+<div>
+<h3 class="font-semibold">Beryllium Drivers</h3>
+<p class="text-sm text-on-surface-variant">Ultra-lightweight aerospace-grade material for surgical precision.</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-secondary-container w-10 h-10 rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-on-secondary-container">air</span>
+</div>
+<div>
+<h3 class="font-semibold">Open-Back Airflow</h3>
+<p class="text-sm text-on-surface-variant">Extended soundstage that feels like high-end monitor speakers.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="mt-12 px-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold">Reviews (128)</h2>
+<button class="text-primary text-sm font-bold uppercase tracking-wide">View All</button>
+</div>
+<div class="space-y-4">
+<!-- Review Card 1 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-[0_20px_40px_rgba(112,0,255,0.06)]">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary text-xs">JD</div>
+<span class="font-bold text-sm">Julian D.</span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">The frequency response is incredibly flat. Perfect for mixing drums and low-end clarity.</p>
+<div class="mt-4 flex gap-2 overflow-x-auto no-scrollbar">
+<div class="w-20 h-20 rounded-md overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Point of view shot of headphones sitting on a wooden studio desk next to an audio interface and a midi keyboard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC75ocA75y5cQqgH63-KZxsxcCQkNXxeVh546yyBGYbgJXNEWMc4oaOED9SKlmyHZ6FwUupUohwBVs27mPDmjuXlosIlGOKffE9y33dBi1owOL2d3SELyotHCraRkAYfABETR6rDlHTgxJ7qkLxwjXYJRlIy8e3uu6iODgeO2ETJNGvCsV_Jjz5Wx59c2LTOblMklzMhj7dcUDILrlruasxkOrGoAawU50oYuTSrF_a3Vo83OW7N8QuoffyMfq0b3lPburzmeS-NTc3"/>
+</div>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-surface-container-lowest p-5 rounded-lg shadow-[0_20px_40px_rgba(112,0,255,0.06)]">
+<div class="flex justify-between items-center mb-3">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary text-xs">SK</div>
+<span class="font-bold text-sm">Sarah K.</span>
+</div>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-xs">star</span>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">Most comfortable pair I've owned for 8-hour sessions. The clamp force is just right.</p>
+</div>
+</div>
+</section>
+<!-- Complete the Set -->
+<section class="mt-12 px-6">
+<h2 class="text-xl font-bold mb-6">Complete the Set</h2>
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-6 -mx-6 px-6">
+<!-- Accessory Item 1 -->
+<div class="w-48 shrink-0 space-y-3">
+<div class="bg-surface-container-low rounded-lg aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Minimalist wooden and metal headphone stand on a white surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgZ1qD4dSSyaPHeXfKymQKQEGyfij1kamsvqqMXHKVlc5bOJebhhSaDG4VKyXFOMLtuugCTCOzKud2DG-8dbkwfu--2DiK9xdSbeSseqsz0WpH259dQ2ogNhLmI8bv-gyy3EE22JNc3cEaoPSVchUrfVxdK0sIafI_3KnDbnW2hHRrnfaIducK4BuGplZgWQcfP14NUrlJ5FCNPNkn5d4r7JoAELczoRdGXBT-DdVt-rNBH0chkOdf5krgnuAzr-Ty4zRn1dl8eQJI"/>
+<button class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm">add</span>
+</button>
+</div>
+<div>
+<h4 class="font-semibold text-sm">Walnut Headphone Stand</h4>
+<span class="text-primary font-bold text-sm">$45.00</span>
+</div>
+</div>
+<!-- Accessory Item 2 -->
+<div class="w-48 shrink-0 space-y-3">
+<div class="bg-surface-container-low rounded-lg aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Coiled high-quality braided audio cable with gold plated jacks on a dark surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADvBt-IleU9QhB5uvVMkjo7Zd0hc0hy5Np2Pzmzs1s5-8YFD-IW-HhNf8JFf-0QXo_sqpwhiK1SSPl_TdpX4UwdDxWDuANj2sNT7z84_Z3HE1U4SeevCj9NIC7fhqN0F7nNI18GIjcRXY8AnEC0F4WPtQ3pDJqEXvIaF83tn6FkC1iHhMxvB87ixgg4SbLprkEGSWd3CPDAKgGEhcOnrSPxKvnIDVQ75mM_TCFi5MSupluwkMpOTE0djCH_aAjllyAMutcrUL6b3G5"/>
+<button class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm">add</span>
+</button>
+</div>
+<div>
+<h4 class="font-semibold text-sm">X-Link Pro XLR Cable</h4>
+<span class="text-primary font-bold text-sm">$29.00</span>
+</div>
+</div>
+<!-- Accessory Item 3 -->
+<div class="w-48 shrink-0 space-y-3">
+<div class="bg-surface-container-low rounded-lg aspect-square overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Professional hard-shell carrying case for headphones with soft velvet interior" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUOwO9fn53N8JJFu_EKzwTslDUuKJLkYphuPTYt3ZZ0nmRcbzzP_LhWQdE79d7WOfEj_rSVw5KIjjThibPi7yji978rzvMhBsDk4qO3mufDbOVTf4BGiCjYoA8UyNvrL5W0oCyZfGDhKvG8Agaoqev8u4saZgKgOzXsIrICxrpGqTCWhHAFLOjzrSeEMkoHDkpNxmSrxupyLRT0PYQ6h1VHZb3CIUBNyMTqPMqod9aS1C7qfpM51cUC8aFV_Q6nfJIalVdLI2ITA3M"/>
+<button class="absolute top-3 right-3 bg-surface-container-lowest/80 backdrop-blur p-2 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-primary text-sm">add</span>
+</button>
+</div>
+<div>
+<h4 class="font-semibold text-sm">Travel Shell Pro Case</h4>
+<span class="text-primary font-bold text-sm">$39.00</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Bottom Actions -->
+<div class="fixed bottom-0 left-0 right-0 p-6 pb-10 bg-surface/80 glass-nav z-50 border-t border-outline-variant/10">
+<div class="flex gap-3 max-w-lg mx-auto gap-4">
+<button class="flex-1 bg-surface-container-high text-on-surface-variant font-bold py-4.5 rounded-xl active:scale-95 duration-200 uppercase text-[11px] tracking-widest flex items-center justify-center transition-all">
+                Add to Cart
+            </button>
+<button class="flex-[1.2] primary-gradient text-on-primary font-bold py-4.5 rounded-xl shadow-[0_8px_24px_rgba(112,0,255,0.25)] active:scale-95 duration-200 uppercase text-[11px] tracking-widest flex items-center justify-center transition-all">
+                Buy Now
+            </button>
+</div>
+</div>
+</body></html>

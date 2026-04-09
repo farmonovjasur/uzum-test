@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#7543a7",
+                        "on-tertiary": "#ffeff1",
+                        "tertiary-dim": "#8e294e",
+                        "surface-bright": "#f6f6f8",
+                        "error-dim": "#a70138",
+                        "surface-dim": "#d2d4d8",
+                        "primary-container": "#af8dff",
+                        "background": "#f6f6f8",
+                        "tertiary-fixed": "#ff8eaf",
+                        "tertiary-container": "#ff8eaf",
+                        "primary-fixed-dim": "#a37bff",
+                        "secondary-fixed-dim": "#dbb4ff",
+                        "surface-tint": "#7000ff",
+                        "on-background": "#2d2f31",
+                        "secondary-dim": "#68369a",
+                        "outline-variant": "#acadaf",
+                        "primary": "#7000ff",
+                        "secondary-fixed": "#e4c6ff",
+                        "secondary-container": "#e4c6ff",
+                        "on-tertiary-fixed-variant": "#701038",
+                        "surface": "#f6f6f8",
+                        "on-secondary-fixed": "#4b137d",
+                        "tertiary-fixed-dim": "#f67ca2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#dbdde0",
+                        "on-error-container": "#510017",
+                        "on-secondary": "#fbefff",
+                        "surface-variant": "#dbdde0",
+                        "on-secondary-fixed-variant": "#69379c",
+                        "on-primary": "#f8f1ff",
+                        "inverse-on-surface": "#9c9d9f",
+                        "surface-container": "#e7e8ea",
+                        "inverse-surface": "#0c0e10",
+                        "on-secondary-container": "#602c91",
+                        "tertiary": "#9d365a",
+                        "error": "#b41340",
+                        "outline": "#757779",
+                        "primary-dim": "#6200e1",
+                        "on-surface": "#2d2f31",
+                        "error-container": "#f74b6d",
+                        "on-primary-fixed": "#000000",
+                        "surface-container-high": "#e1e2e5",
+                        "surface-container-low": "#f0f1f3",
+                        "on-tertiary-fixed": "#380017",
+                        "inverse-primary": "#a178ff",
+                        "primary-fixed": "#af8dff",
+                        "on-surface-variant": "#5a5c5d",
+                        "on-primary-fixed-variant": "#370085",
+                        "on-tertiary-container": "#640430",
+                        "on-primary-container": "#2c006e",
+                        "on-error": "#ffefef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; vertical-align: middle; }
+        .active-heart { font-variation-settings: 'FILL' 1; }
+        .glass-nav { backdrop-filter: blur(24px); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f6f6f8]/70 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#7000ff]" data-icon="location_on">location_on</span>
+<h1 class="font-['Inter'] font-semibold tracking-tight text-[#2d2f31] text-lg">The Fluid Marketplace</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-[#f0f1f3] transition-colors p-2 rounded-full active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-28 px-6">
+<!-- Header Section -->
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold tracking-tighter text-on-surface mb-2">Your Favorites</h2>
+<p class="text-on-surface-variant text-sm">3 items curated in your digital atelier</p>
+</div>
+<!-- Favorites Grid: Asymmetric Layout Pattern -->
+<div class="grid grid-cols-1 gap-8">
+<!-- Item 1: Ethereal Chronos v2 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] shadow-[0_20px_40px_rgba(112,0,255,0.04)]">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Minimalist luxury watch" class="w-full h-full object-cover mix-blend-multiply" data-alt="Close-up of a minimalist silver luxury wristwatch on a clean white surface with sharp geometric shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq7Wtw6AwysCCBFNDFbEAlFHQzi60RQIwcYjglrLAdMrzSPTzR7Fz7h4244clwPRcx3jrdgnUZ1J7bOWRemZyB6bbPdlkURXXCE7xLu6iUf9CcItKr5h3lh0a5_ou2aDNe5CtwYjCIsVAnxoiHqkUwopyoOA_i2TBTOhxDixnok7UZx5vLPSbGaaMWJdvQalPmGuo0d51iChVW6fgUANVQpU85hky7vlt9IUmEaZNML5t1yVTHdlbK5Y4USqwPsrjymn-2cloXMxXa"/>
+<button class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md p-2 rounded-full text-primary shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined active-heart" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<!-- Status Badge -->
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-container text-on-tertiary-container text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Limited Stock</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-1">Ethereal Chronos v2</h3>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider">Precision Horology</p>
+</div>
+<span class="text-xl font-bold text-primary">$495.00</span>
+</div>
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-semibold text-sm tracking-tight shadow-lg active:scale-95 transition-all">
+                        Move to Cart
+                    </button>
+</div>
+</div>
+<!-- Item 2: Nebula Sound-X -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] shadow-[0_20px_40px_rgba(112,0,255,0.04)]">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Premium wireless headphones" class="w-full h-full object-cover mix-blend-multiply" data-alt="Matte black wireless over-ear headphones displayed on a smooth gray pedestal with soft editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyejAevQZY5FVkqxS-83a7GH7a7pg9aaugNIMvBvrE6FH7q4ok6CChFE0biJh26l9IIX37czsXJVaB340CphKlEZ5yn2kYwKXcgA6YhkQTsO-dYmPi6lyGRNz4mFXBIgZGC0PvGotdao94rPioO1VYkgm23huzSl6RL47_dJgNtIP2lRe8pGnGtz0pN-kUkT43iaKcy0ELGWSFQB0FfmDsPQI1dSQSFedN1sVfhOj9QlAmDH2B1mfGvfEhHafMzhRJp_L7oDxcUYlm"/>
+<button class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md p-2 rounded-full text-primary shadow-sm">
+<span class="material-symbols-outlined active-heart" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-on-surface mb-1">Nebula Sound-X</h3>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider">Acoustic Engineering</p>
+</div>
+<span class="text-xl font-bold text-primary">$299.00</span>
+</div>
+<button class="w-full py-4 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-semibold text-sm tracking-tight shadow-lg active:scale-95 transition-all">
+                        Move to Cart
+                    </button>
+</div>
+</div>
+<!-- Item 3: Velocity Pro Runner (Out of Stock State) -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden opacity-75 grayscale-[0.5] shadow-[0_20px_40px_rgba(112,0,255,0.02)]">
+<div class="relative h-64 overflow-hidden bg-surface-container-low">
+<img alt="Sleek running shoes" class="w-full h-full object-cover mix-blend-multiply" data-alt="Vibrant red performance running shoes captured in a dynamic pose against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjyb3AEiJuIyZnb7LJTu3zGKNhRBG64xiJcTiP0-0OnU98OBlAdJDJjaDwqaynCHzBZJKt8l3xnyG_6JcrZNMwy7BtoTogqQbN_88E1TS5IIyw4myBaiMleE5Ezw7aYENdjxqUyuJi_nE1AaJtSB7T45rT_PPAxmciXp4BGcXiaiGrRY0mfisIH_MmDvG7uErn7DY8g6KTKOgnz6A_1qKfwgH8C_fIkkXA8BcN-OPfAHwpx4fZkVIsinTa4STM0RIKoxH0to53sZ8f"/>
+<button class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md p-2 rounded-full text-primary">
+<span class="material-symbols-outlined active-heart" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<!-- Status Badge -->
+<div class="absolute inset-0 bg-on-surface/5 flex items-center justify-center">
+<span class="bg-surface-container-highest text-on-surface-variant text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">Out of Stock</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="text-xl font-bold text-on-surface-variant mb-1">Velocity Pro Runner</h3>
+<p class="text-on-surface-variant text-xs font-medium uppercase tracking-wider">Performance Wear</p>
+</div>
+<span class="text-xl font-bold text-on-surface-variant">$180.00</span>
+</div>
+<button class="w-full py-4 rounded-full bg-surface-container-highest text-on-surface-variant font-semibold text-sm tracking-tight cursor-not-allowed" disabled="">
+                        Notify Me
+                    </button>
+</div>
+</div>
+</div>
+<!-- Suggestions Beat -->
+<div class="mt-12 mb-8">
+<div class="p-8 bg-secondary-container rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-on-secondary-container mb-4 text-4xl" data-icon="auto_awesome">auto_awesome</span>
+<h4 class="text-xl font-bold text-on-secondary-container mb-2">Discovery Awaits</h4>
+<p class="text-on-secondary-fixed-variant text-sm mb-6">Based on your favorites, we thought you'd love these curated pieces.</p>
+<button class="px-8 py-3 bg-on-secondary-container text-surface-container-lowest rounded-full text-sm font-bold shadow-md active:scale-95 transition-all">
+                    Explore New Drops
+                </button>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#f6f6f8]/70 backdrop-blur-xl rounded-t-[2rem] flex justify-around items-center w-full px-4 h-20 pb-safe shadow-[0_-20px_40px_rgba(112,0,255,0.06)]">
+<a class="flex flex-col items-center justify-center text-[#5a5c5d] px-5 py-1.5 hover:bg-[#f0f1f3] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-[#e4c6ff] text-[#602c91] rounded-full px-5 py-1.5 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined active-heart" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Favorites</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5a5c5d] px-5 py-1.5 hover:bg-[#f0f1f3] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#5a5c5d] px-5 py-1.5 hover:bg-[#f0f1f3] active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Inter'] text-[11px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

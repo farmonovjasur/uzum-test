@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Details | The Fluid Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#dbb4ff",
+                        "secondary": "#7543a7",
+                        "inverse-on-surface": "#9c9d9f",
+                        "tertiary-container": "#ff8eaf",
+                        "on-primary-fixed": "#000000",
+                        "on-secondary": "#fbefff",
+                        "background": "#f6f6f8",
+                        "secondary-fixed": "#e4c6ff",
+                        "surface": "#f6f6f8",
+                        "tertiary-fixed": "#ff8eaf",
+                        "inverse-surface": "#0c0e10",
+                        "on-error": "#ffefef",
+                        "surface-bright": "#f6f6f8",
+                        "surface-container": "#e7e8ea",
+                        "surface-variant": "#dbdde0",
+                        "surface-dim": "#d2d4d8",
+                        "surface-tint": "#7000ff",
+                        "on-background": "#2d2f31",
+                        "tertiary-fixed-dim": "#f67ca2",
+                        "outline": "#757779",
+                        "on-surface-variant": "#5a5c5d",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#b41340",
+                        "surface-container-highest": "#dbdde0",
+                        "on-tertiary-fixed": "#380017",
+                        "on-tertiary-fixed-variant": "#701038",
+                        "surface-container-low": "#f0f1f3",
+                        "on-surface": "#2d2f31",
+                        "on-primary-container": "#2c006e",
+                        "error-dim": "#a70138",
+                        "outline-variant": "#acadaf",
+                        "primary": "#7000ff",
+                        "primary-fixed": "#af8dff",
+                        "error-container": "#f74b6d",
+                        "primary-dim": "#6200e1",
+                        "tertiary-dim": "#8e294e",
+                        "surface-container-high": "#e1e2e5",
+                        "on-secondary-fixed-variant": "#69379c",
+                        "on-tertiary": "#ffeff1",
+                        "on-primary": "#f8f1ff",
+                        "inverse-primary": "#a178ff",
+                        "on-secondary-fixed": "#4b137d",
+                        "tertiary": "#9d365a",
+                        "on-tertiary-container": "#640430",
+                        "on-primary-fixed-variant": "#370085",
+                        "primary-fixed-dim": "#a37bff",
+                        "on-secondary-container": "#602c91",
+                        "secondary-container": "#e4c6ff",
+                        "on-error-container": "#510017",
+                        "primary-container": "#af8dff",
+                        "secondary-dim": "#68369a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(112, 0, 255, 0.06);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #7000ff 0%, #af8dff 100%);
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-xl transition-transform duration-200 shadow-[0_20px_40px_rgba(112,0,255,0.06)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black tracking-tighter text-purple-700">The Fluid Marketplace</span>
+<div class="hidden md:flex items-center gap-6 font-medium text-sm text-slate-600">
+<a class="hover:text-purple-600 transition-colors" href="#">Location</a>
+<a class="hover:text-purple-600 transition-colors" href="#">EN</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-slate-600 hover:text-purple-600 transition-colors">favorite</button>
+<button class="material-symbols-outlined text-slate-600 hover:text-purple-600 transition-colors">shopping_cart</button>
+<button class="px-6 py-2 primary-gradient text-on-primary rounded-full font-bold text-sm shadow-lg shadow-purple-500/20 active:scale-95 transition-transform">Login</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-32 max-w-screen-2xl mx-auto px-6">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-8">
+<a href="#">Electronics</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<a href="#">Audio</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-primary">Studio Pro X-1</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Product Gallery: Asymmetric Layout -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="relative rounded-lg overflow-hidden bg-surface-container-lowest editorial-shadow">
+<img alt="Studio Pro X-1 Headphones" class="w-full aspect-[4/3] object-cover hover:scale-105 transition-transform duration-700" data-alt="high-end sleek matte black studio headphones resting on a minimalist concrete pedestal with dramatic atmospheric lighting and purple rim light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyAlD9i7eaka0ojR28zAN1Cfx6fR4OKX8CDPshXKb11iFuYcrMpkAnbTAB-dvFJfr3t1qLbEQBNHOqD3nnc5b-9Vs6htYyBvM0ZiltaE5axIflnvoE-t1KKSyLI5Ibvr9o20SLyn7kA52Pf6c-Si3TY4WbQSkluJZ1Nc-7TzzicWgMaxXSh2v1oi3A9y47gL8AVqLcHX04pOE_SSl7zS7H1885cVCDvydFdO11IMuJeqOBHe4QnPT1FWxPvuAcyUISHfsZp3oW811"/>
+<div class="absolute top-6 left-6 flex flex-col gap-2">
+<span class="bg-tertiary-container text-on-tertiary-container px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Limited Stock</span>
+<span class="bg-primary-container text-on-primary-container px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Editor's Pick</span>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-4">
+<button class="rounded-md overflow-hidden bg-surface-container-lowest ring-2 ring-primary">
+<img alt="Detail 1" class="w-full aspect-square object-cover opacity-100 transition-opacity" data-alt="close up macro shot of high quality leather ear pads on professional studio headphones with visible stitching" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrJuOnIPeT9YdGOo-e8y5kyeP3xg3VpnF32-saecdzYCJHJPL8OQIIo1sTnIy4xWUsov6R1IzYa0rgEnylH9cYctwUvkIvSqd74JxkdWWVYPXhAmehN3LKk8GVyq67gEaS8aNIqnFdC_Ua8YfsSSw4QPsN7VSo02WTq7sWX-gJ6safBC0Z6ta62JwDYnFHSgadApJKYnVPefAwwp4priYaXB96Pea-dQOR3ViFYrO-47ENvlRJ4xTPt-kYcSE4C48XMdCjGNKruSuB"/>
+</button>
+<button class="rounded-md overflow-hidden bg-surface-container-lowest hover:opacity-80 transition-opacity">
+<img alt="Detail 2" class="w-full aspect-square object-cover" data-alt="side view of modern minimalist headphones with brushed metal hardware in a clean aesthetic environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOuqmuTm0485WEWc9rbTUUvk6x5ewAEj5dQ5ktDRwx5heGSaHJl84OrAOSoY9vWjM6Uvq5UGWCrWifuyRlfBHu4Ml_VQatbouWJaqXRKV00IOzibSLS2IIpxr3Md8dSqto655a_liHwxA70n_N9F2raY5RP48SWXb7T4XvqYP9TbBSXAek9zcqHc8kGc1AdexXnGZIvkLM8rlEggiu_iBi6Uo7xEF8kicFWrjLLG5PiF6maCkk1OLVqoXeKhMsvBQ8jdRHhRmz_9H8"/>
+</button>
+<button class="rounded-md overflow-hidden bg-surface-container-lowest hover:opacity-80 transition-opacity">
+<img alt="Detail 3" class="w-full aspect-square object-cover" data-alt="low angle shot of premium audio equipment on a wooden desk with soft warm lighting and bokeh background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFsWcsRMiHWodrNdd2vT5PIx-sCoKqpBzIPRJTkEC_8DxnZjkMozKL6cjmothqOhQUYrmHr5W3NDM_NDdR3dTBzS5SqZxyDXNo1JenAOrzCVtdl2ON49bBX6L06xW0g3qDHiLgmW88B7WLxesRMnTJ2Zs92gTdRRYBMHdVda45cUheErSWFe-IgDDtZVbi3KEak8dsxbzc6bsM9j1VSXBIShfVmFtPy7uF5lIgshjTNpfhlBHiKJ8cH2KSGtPbOCo6a09TzDOtcQg"/>
+</button>
+<div class="relative rounded-md overflow-hidden bg-surface-container-lowest cursor-pointer group">
+<img alt="Gallery" class="w-full aspect-square object-cover blur-[2px] group-hover:blur-0 transition-all" data-alt="artistic composite of audio cables and professional studio monitoring gear with violet and neon blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELEMwgWSxQsTCKeiD_NHaqHDUMOK3Y-1WR-S8LJUppiDBpOGutZe1bERN0RHD74tqaYoyRmv6zfhW4ltczMVOuMHdos4SUiMSQxsG1Nv0GKuNLpX6L0WvnyRcyXc_bgDFjwbF60_cOJ6KUKl70UKtPVVAbU3_IOtfP16UfHW1uisb8nkMneYgThtI8lTC9oyhRLgBuAI9-yw5lRvFuPTnL97-CTx4lLVlhQwkfWtguJsB1xX8DL6q5UO4WEcPvp6aBl3RWBM2N2Tx"/>
+<div class="absolute inset-0 bg-primary/20 flex items-center justify-center text-white font-bold">+12</div>
+</div>
+</div>
+</div>
+<!-- Product Info: Columnar Shell -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-4 flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+<span class="text-sm font-semibold text-on-surface-variant">4.8 (1,240 Reviews)</span>
+</div>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface mb-4 leading-tight">Studio Pro X-1: Ultra-Linear Acoustic Headphones</h1>
+<p class="text-lg text-on-surface-variant font-medium mb-8 leading-relaxed">
+                    Designed for the digital atelier. Experience uncompromised sonic fidelity with our proprietary beryllium drivers and zero-fatigue ergonomic suspension. Every frequency is a choice, every detail is preserved.
+                </p>
+<!-- Price Block -->
+<div class="p-8 rounded-lg bg-surface-container-low mb-8 flex flex-col gap-2">
+<div class="flex items-end gap-4">
+<span class="text-4xl font-black text-on-surface">$299.00</span>
+<span class="text-xl text-on-surface-variant line-through opacity-50 mb-1">$450.00</span>
+<span class="bg-error-container text-on-error-container px-3 py-1 rounded-full text-xs font-black tracking-tighter uppercase mb-2">35% OFF</span>
+</div>
+<p class="text-xs font-bold text-primary tracking-widest uppercase">FREE EXPRESS SHIPPING INCLUDED</p>
+</div>
+<!-- CTA Actions -->
+<div class="flex flex-col gap-4">
+<div class="flex gap-4">
+<button class="flex-[2] py-4 primary-gradient text-on-primary rounded-full font-bold text-lg shadow-xl shadow-purple-500/30 hover:scale-[1.02] active:scale-95 transition-all">
+                            Buy Now
+                        </button>
+<button class="flex-1 py-4 bg-surface-container-highest text-primary rounded-full font-bold text-lg hover:bg-surface-container transition-colors">
+                            Add to Cart
+                        </button>
+</div>
+<button class="flex items-center justify-center gap-2 py-3 text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined">share</span>
+                        Share this masterpiece
+                    </button>
+</div>
+<!-- Trust Badges -->
+<div class="mt-12 grid grid-cols-3 gap-4 border-t border-surface-container pt-8">
+<div class="flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">2 Year Warranty</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Global Logistics</span>
+</div>
+<div class="flex flex-col items-center text-center gap-2">
+<span class="material-symbols-outlined text-primary">eco</span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">Ethical Sourcing</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Reviews Section: Bento Style -->
+<section class="mt-32">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-3xl font-black tracking-tight text-on-surface mb-2">Customer Reviews</h2>
+<p class="text-on-surface-variant font-medium">Voices from the community</p>
+</div>
+<button class="px-8 py-3 bg-white text-primary border border-primary/20 rounded-full font-bold hover:bg-primary/5 transition-colors">Write a Review</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Highlight Review -->
+<div class="md:col-span-2 p-8 rounded-lg bg-surface-container-lowest editorial-shadow">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-container overflow-hidden">
+<img alt="User" class="w-full h-full object-cover" data-alt="portrait of a professional music producer in a studio setting with soft warm key light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHjnrc0XCA9e84xvM91ZiM4UI5ZD5NN1W2CQ1lAe1Znq4PkQVWTsvp4MiVP01xG3PJ1ZDAJToaeEJt4BqH6gJJgkHHgx8h6MNRQ20mUVwWTdFde8PeejfmREz2Ff-sNxAhU5RWmbYD6N8N-MILQHmLUUH8Fgo9BP486qKCH6Ju7c-nSAij6Zm3kgELCYOtn99DfOeVzELQ0tL3GQ8NYKKEK_gbU0L-7cwHs4Xa-X7x4W08AkqVoAaq2-rJIR_wHJKBKvwPrQZ5Rh2f"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Alex Rivera</p>
+<div class="flex text-primary scale-75 -ml-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<span class="ml-auto text-xs font-bold text-on-surface-variant/50">2 DAYS AGO</span>
+</div>
+<p class="text-lg font-medium text-on-surface mb-6 italic leading-relaxed">"As a professional sound engineer, I've used everything. These headphones punch way above their weight class. The soundstage is remarkably wide and the transients are crisp without being fatiguing."</p>
+<div class="grid grid-cols-3 gap-4">
+<img alt="Review Photo" class="rounded-md w-full aspect-video object-cover" data-alt="professional recording studio desk with the product headphones placed next to a mixing console and laptop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxEXZl8L1ZUGNRivOcupIAMl89wBhDSSpQjlM1i4cb1vY_kH9ozoZHPqFAdXQZccwqhbfJ4C0vhIyVJQv-tbwcWzpGZ6XakwlspmtM5xFUor9D2QwcgP84-G34ohilNqMzVbJZNKRJNVVOQSV5J3HbNnYi3JcVQ2BcS49VuofQ_AImkAWhuVSBaLHIwVXIO59LtpDKZpCsr2d5F3qeZhbEuNwRDoiXb7cHHgsj-zIiAiuNYt_jUeWqGNSQSTQukbEEKlNemVXp8HQ4"/>
+<img alt="Review Photo" class="rounded-md w-full aspect-video object-cover" data-alt="atmospheric shot of headphones hanging on a minimalist stand in a dimly lit modern apartment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQl4U2lChsgsQExEbszUXWPddeE1cqkyhcxfSgK6YfMwBYXSaTrDcV3O3p2gMZDrEyhpqAtZpX-qfFC8F0XfzhH1TH5e-UYjzyo4qMVyxokrnXgd8i7-4e4SYqJwIJq_r03pO1j6FIkFUrHJpKADzR8QrndC8NmLnJYcylo58MNrtiMTjbwC-aCSmMmxJ-XdrACGHq2SmEfZkjRP7yKLh6NjFOuW3-eXI_VAesv1CZ_1a06bk2MsACzWUdrkUT9SzQ8bSNm2b0as-"/>
+<div class="rounded-md bg-surface-container flex items-center justify-center text-xs font-bold text-on-surface-variant uppercase tracking-widest">Verified Purchase</div>
+</div>
+</div>
+<!-- Secondary Review 1 -->
+<div class="p-8 rounded-lg bg-white/50 border border-white">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container"></div>
+<p class="font-bold text-sm">Elena G.</p>
+</div>
+<div class="flex text-primary scale-75 -ml-5 mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant leading-relaxed">"Perfect for long coding sessions. The padding is like clouds for my ears. Absolutely worth the investment."</p>
+</div>
+<!-- Secondary Review 2 -->
+<div class="p-8 rounded-lg bg-white/50 border border-white">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container"></div>
+<p class="font-bold text-sm">Marcus K.</p>
+</div>
+<div class="flex text-primary scale-75 -ml-5 mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star</span>
+</div>
+<p class="text-sm font-medium text-on-surface-variant leading-relaxed">"The build quality is insane. It feels like it's built to last a decade. Only wish the cable was a bit longer."</p>
+</div>
+</div>
+</section>
+<!-- Related Products: Pedestal Style -->
+<section class="mt-32">
+<div class="mb-12">
+<h2 class="text-3xl font-black tracking-tight text-on-surface mb-2">Complete the Set</h2>
+<p class="text-on-surface-variant font-medium">Curated peripherals for the ultimate experience</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-lg overflow-hidden bg-surface-container-low mb-6 relative transition-all duration-500 group-hover:scale-[1.02] group-hover:editorial-shadow">
+<img alt="DAC Amp" class="w-full h-full object-cover" data-alt="brushed aluminum portable DAC amplifier with a glowing orange volume knob and minimalist controls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQpePUC72Fy4EfU6nKR_EHnutA2ZGAsvj7Nb_F2MGHOFgit6LjWlz227TdYNsZs2HACKEO6YuKg45WnUegM_2BgehC6vcAcUDCHNxzqM7TvE1YFuJmUKw3JY1cR5BiWbw45oJF7aQ9o8QVrFZ0lEp1FMkRGwHscFxZliEMkVnWihcZNpfe4IVz7xZtyYAkLYXW7VzLzV9qSWZLHeNOc097c9xjY4RfnZiMoCe2se5IB7ZV0x9xHgfv17Ba-iSAGW0l1CtE4KbH_L4V"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 primary-gradient rounded-full text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Neural DAC Amp v2</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="font-black text-xl text-on-surface-variant">$189.00</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.9</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-lg overflow-hidden bg-surface-container-low mb-6 relative transition-all duration-500 group-hover:scale-[1.02] group-hover:editorial-shadow">
+<img alt="Stand" class="w-full h-full object-cover" data-alt="sculptural wooden headphone stand made of dark walnut wood with a premium organic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzHbnWdFeLUBxI0W2iHnWEYP4dNFP_TB2b4Jz-eJV8-1Gycvf3hBtlRnS3W_7GRHjNLsNZtaDohID5nB7u9YHxocG7jgaKBO6xgm7zqhKeRrMW0rHEZxnlzVNDjBbzb0s_xOx6e7dc0IOtMSgBJhOuF9CicPllZVO1AlYP2jPOEZUa-keWHd1bNRAX0wIEih4gS2iaUdGayh8vCQEtdopKNHtMuK8xWwZr0wCUpIb0MC5GzRcK1VeOsSrEW2yayXbPqyYFS8cMPmfl"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 primary-gradient rounded-full text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Monolith Walnut Stand</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="font-black text-xl text-on-surface-variant">$75.00</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">5.0</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-lg overflow-hidden bg-surface-container-low mb-6 relative transition-all duration-500 group-hover:scale-[1.02] group-hover:editorial-shadow">
+<img alt="Cable" class="w-full h-full object-cover" data-alt="braided silver plated copper audio cable with heavy duty gold plated jacks on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIeNbLQG1VKeCFBkeccDXkRpmosCV8bwJwRlXgg_Zugnn5IoVOHh5Bx-8oNDAEKAucLEceER_zdXN5Vx_h5A676lJ8GcFXoelhFXMUmwLscTjPxnGDJ4I6cGUHbRdur1b-0AMzOQgxiX0Y3udSXFJoC3i9HLmw--T9ZGPKpH9778XW3wcx_TQOwOLKKii5svnDEPcGsSaOhd5KfWk5VQJbrf9mPVPvpicFKTHOgnBPDrTJkl2VoMWQjintaUFB8_OpykDauInqv2PF"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 primary-gradient rounded-full text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Silver-Core XLR Cable</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="font-black text-xl text-on-surface-variant">$45.00</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.7</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] rounded-lg overflow-hidden bg-surface-container-low mb-6 relative transition-all duration-500 group-hover:scale-[1.02] group-hover:editorial-shadow">
+<img alt="Case" class="w-full h-full object-cover" data-alt="rugged hardshell carrying case for headphones with custom foam inserts and a premium textile finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTnEGanXgKyIepjzaHQfvlEXRCDhSAWVs8IAlM6sKeLiYWk8n8PN99J235tjfpxMO79dgkm6MqTLhzbjO4uNdC9XGNIyQC8OVylLXfKhtLTopL7dmk2azrpki2z49WNfhcmHSXORUaZ1fvVf-kcZPdxZRBmd5XYlGR4mSXXB3_Nq65cOUTWCuHSHLlbFh2JkxpZ8hylmd_Ghgi_I3g7BJ5ic8xGVN8AJnZHxP8x2gQYK48ZfXsxCzNQvWieNJi6r1Hi9_29mk8U6Vi"/>
+<button class="absolute bottom-6 right-6 w-12 h-12 primary-gradient rounded-full text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-300">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+</button>
+</div>
+<h3 class="text-lg font-bold text-on-surface group-hover:text-primary transition-colors">Voyager Hard Case</h3>
+<div class="flex justify-between items-center mt-2">
+<span class="font-black text-xl text-on-surface-variant">$59.00</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold">4.8</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-slate-100 pt-16 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-screen-2xl mx-auto px-8">
+<div class="md:col-span-1">
+<span class="text-xl font-bold text-slate-900 block mb-6">The Fluid Marketplace</span>
+<p class="text-slate-500 text-sm leading-relaxed mb-8">Curating the finest digital and physical artifacts for the modern atelier since 2024.</p>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">language</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</button>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Shop</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-purple-600 transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-purple-600 transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-purple-600 transition-colors" href="#">Sale</a></li>
+<li><a class="hover:text-purple-600 transition-colors" href="#">Shipping</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Help</h4>
+<ul class="flex flex-col gap-4 text-sm text-slate-500">
+<li><a class="hover:text-purple-600 transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-purple-600 transition-colors" href="#">Contact</a></li>
+<li><a class="hover:text-purple-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-purple-600 transition-colors" href="#">Returns</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6 uppercase tracking-widest text-xs">Newsletter</h4>
+<p class="text-xs text-slate-500 mb-4">Join our community for exclusive drops and editorial content.</p>
+<div class="flex gap-2">
+<input class="bg-white border-none rounded-full px-4 py-2 text-sm flex-1 focus:ring-2 focus:ring-primary" placeholder="Email address" type="email"/>
+<button class="primary-gradient text-white rounded-full px-6 py-2 text-xs font-bold uppercase tracking-widest">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-screen-2xl mx-auto px-8 mt-16 pt-8 border-t border-slate-200">
+<p class="text-sm text-slate-500 text-center">© 2024 The Fluid Marketplace. An Editorial Experience.</p>
+</div>
+</footer>
+<!-- Mobile Navigation Bar -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-6 pb-6 pt-2 bg-white/80 backdrop-blur-2xl shadow-[0_-10px_30px_rgba(0,0,0,0.05)] border-t border-white/20">
+<a class="flex flex-col items-center justify-center bg-purple-600 text-white rounded-full p-3 -mt-6 shadow-lg shadow-purple-500/40" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Wishlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2 relative" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Cart</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 p-2" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest mt-1">Profile</span>
+</a>
+</nav>
+</body></html>
