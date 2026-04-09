@@ -22,13 +22,17 @@ export default function Navbar() {
   const [searchQuery, setSearchQuery] = useState('')
   const [isSearchFocused, setIsSearchFocused] = useState(false)
 
-  const langRef = useRef(null)
+  const desktopLangRef = useRef(null)
+  const mobileLangRef = useRef(null)
   const navigate = useNavigate()
 
   // Close language dropdown on outside click
   useEffect(() => {
     const handler = (e) => {
-      if (langRef.current && !langRef.current.contains(e.target)) {
+      const clickedDesktop = desktopLangRef.current && desktopLangRef.current.contains(e.target)
+      const clickedMobile = mobileLangRef.current && mobileLangRef.current.contains(e.target)
+      
+      if (!clickedDesktop && !clickedMobile) {
         setShowLangDropdown(false)
       }
     }
@@ -65,7 +69,7 @@ export default function Navbar() {
               </div>
 
               {/* Language Selector — redesigned */}
-              <div className="relative" ref={langRef}>
+              <div className="relative" ref={desktopLangRef}>
                 <button
                   onClick={() => setShowLangDropdown(!showLangDropdown)}
                   className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all cursor-pointer ${
@@ -79,9 +83,9 @@ export default function Navbar() {
                 </button>
 
                 {showLangDropdown && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 bg-surface-container-lowest rounded-2xl shadow-float py-2 min-w-[180px] z-[60] overflow-hidden animate-modal-in">
-                    {/* Arrow */}
-                    <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-surface-container-lowest rotate-45 rounded-sm" />
+                  <div className="absolute top-full right-0 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 mt-3 bg-surface-container-lowest rounded-2xl shadow-float py-2 min-w-[180px] z-[60] overflow-hidden animate-modal-in origin-top-right lg:origin-top">
+                    {/* Arrow (hidden on mobile for simplicity or positioned correctly) */}
+                    <div className="hidden lg:block absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-surface-container-lowest rotate-45 rounded-sm" />
                     <div className="relative z-10">
                       {languages.map((lang) => (
                         <button
@@ -147,18 +151,32 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center gap-3 md:gap-5 shrink-0">
+            {/* Mobile Language Selector */}
+            <div className="lg:hidden relative" ref={mobileLangRef}>
+              <button
+                onClick={() => setShowLangDropdown(!showLangDropdown)}
+                className={`flex items-center justify-center w-8 h-8 rounded-full transition-all cursor-pointer ${
+                  showLangDropdown
+                    ? 'bg-primary/10 text-primary'
+                    : 'text-on-surface-variant hover:text-primary hover:bg-surface-container-low'
+                }`}
+              >
+                <div className="text-lg leading-none">{currentLang?.flag}</div>
+              </button>
+            </div>
+
             {/* Mobile search icon */}
             <Link
               to="/search"
-              className="md:hidden text-on-surface-variant hover:text-primary transition-colors"
+              className="md:hidden text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-surface-container-low"
             >
               <Search size={22} strokeWidth={1.5} />
             </Link>
 
-            {/* Favorites with badge */}
+            {/* Favorites with badge - hidden on mobile */}
             <Link
               to="/favorites"
-              className="relative hover:text-primary transition-colors text-on-surface-variant"
+              className="relative hover:text-primary transition-colors text-on-surface-variant hidden md:block"
             >
               <Heart
                 size={22}
@@ -173,10 +191,10 @@ export default function Navbar() {
               )}
             </Link>
 
-            {/* Cart with badge */}
+            {/* Cart with badge - hidden on mobile */}
             <Link
               to="/cart"
-              className="relative hover:text-primary transition-colors text-on-surface-variant"
+              className="relative hover:text-primary transition-colors text-on-surface-variant hidden md:block"
             >
               <ShoppingCart size={22} strokeWidth={1.5} />
               {totalItems > 0 && (
@@ -191,7 +209,7 @@ export default function Navbar() {
                 setAuthMode('login')
                 setShowAuthModal(true)
               }}
-              className="primary-gradient text-on-primary px-4 md:px-6 py-2 rounded-full font-bold text-sm shadow-cta hover:scale-[1.02] active:scale-95 transition-transform"
+              className="primary-gradient text-on-primary px-4 md:px-6 py-2 rounded-full font-bold text-sm shadow-cta hover:scale-[1.02] active:scale-95 transition-transform hidden md:block"
             >
               {t('login')}
             </button>

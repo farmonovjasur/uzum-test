@@ -5,6 +5,8 @@ import CartPage from './pages/CartPage'
 import FavoritesPage from './pages/FavoritesPage'
 import SearchPage from './pages/SearchPage'
 
+import ProfilePage from './pages/ProfilePage'
+
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +16,7 @@ function App() {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   )

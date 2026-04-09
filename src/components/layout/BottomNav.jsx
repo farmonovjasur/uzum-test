@@ -30,9 +30,9 @@ export default function BottomNav() {
             <Link
               key={path}
               to={path}
-              className={`flex flex-col items-center justify-center rounded-full px-5 py-1.5 active:scale-90 transition-transform duration-200 ${
+              className={`flex flex-col items-center justify-center rounded-full px-3 md:px-5 py-1.5 active:scale-90 transition-transform duration-200 ${
                 active
-                  ? 'bg-secondary-container text-on-secondary-container -mt-6 shadow-lg shadow-primary/40 scale-110'
+                  ? 'bg-secondary-container text-on-secondary-container -mt-4 shadow-lg shadow-primary/30 scale-[1.15]'
                   : 'text-on-surface-variant hover:bg-surface-container-low'
               }`}
             >
